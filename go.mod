@@ -1,6 +1,8 @@
 module github.com/openebs/zfs-localpv
 
-go 1.19
+go 1.22.0
+
+toolchain go1.22.5
 
 require (
 	github.com/container-storage-interface/spec v1.8.0
@@ -11,17 +13,18 @@ require (
 	github.com/openebs/lib-csi v0.8.2
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.6.0
-	github.com/stretchr/testify v1.8.1
+	github.com/stretchr/testify v1.8.4
 	golang.org/x/net v0.23.0
-	golang.org/x/sys v0.18.0
+	golang.org/x/sys v0.22.0
 	google.golang.org/grpc v1.56.3
 	google.golang.org/protobuf v1.33.0
 	k8s.io/api v0.27.2
 	k8s.io/apimachinery v0.27.2
 	k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible
 	k8s.io/code-generator v0.27.2
-	k8s.io/klog/v2 v2.100.1
-	k8s.io/utils v0.0.0-20230505201702-9f6742963106
+	k8s.io/klog/v2 v2.120.1
+	k8s.io/mount-utils v0.30.3
+	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8
 	sigs.k8s.io/controller-runtime v0.2.0
 	sigs.k8s.io/yaml v1.3.0
 )
@@ -32,7 +35,7 @@ require (
 	github.com/emicklei/go-restful/v3 v3.10.2 // indirect
 	github.com/evanphx/json-patch v5.6.0+incompatible // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
-	github.com/go-logr/logr v1.2.4 // indirect
+	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-openapi/jsonpointer v0.19.6 // indirect
 	github.com/go-openapi/jsonreference v0.20.2 // indirect
 	github.com/go-openapi/swag v0.22.3 // indirect
@@ -47,7 +50,6 @@ require (
 	github.com/inconshreveable/mousetrap v1.0.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/kr/pretty v0.3.1 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/moby/spdystream v0.2.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -63,7 +65,6 @@ require (
 	golang.org/x/time v0.3.0 // indirect
 	golang.org/x/tools v0.9.1 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/genproto v0.0.0-20230410155749-daa745c078e1 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
@@ -76,7 +77,13 @@ require (
 	sigs.k8s.io/testing_frameworks v0.1.2 // indirect
 )
 
+require (
+	github.com/moby/sys/mountinfo v0.7.2 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20230526203410-71b5a4ffd15e // indirect
+)
+
 replace (
 	github.com/container-storage-interface/spec => github.com/container-storage-interface/spec v1.2.0
+	github.com/openebs/lib-csi => github.com/hensur/lib-csi v0.0.0-20240801074809-00af9bd009fe
 	k8s.io/client-go => k8s.io/client-go v0.27.2
 )
