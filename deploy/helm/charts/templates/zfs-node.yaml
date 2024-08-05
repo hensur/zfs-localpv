@@ -126,7 +126,7 @@ spec:
             name: openebs-zfspv-bin
         - name: host-root
           hostPath:
-            path: /
+            path: /host
             type: Directory
         - name: registration-dir
           hostPath:
